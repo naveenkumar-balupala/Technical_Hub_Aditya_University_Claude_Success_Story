@@ -176,7 +176,7 @@ p { color: #3a4254; }
 .section-dark .image-card figcaption,
 .section-dark .image-card { background: rgba(255,255,255,.04); color: #b8c2e0; border-color: rgba(255,255,255,.1); }
 .gallery .image-card img { height: 260px; }
-.winners-photo img { max-height: 460px; object-position: center 30%; }
+.winners-photo img { height: auto; max-height: none; object-fit: contain; background: #0d1c4d; }
 .results-photo img { max-height: 420px; }
 .shot-login { box-shadow: 0 16px 40px rgba(0,0,0,.4); }
 .image-placeholder {
