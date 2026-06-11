@@ -19,32 +19,13 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0">
 
-  <!-- ============ TOP BAR ============ -->
-  <div class="topbar d-none d-lg-block">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="topbar-left">
-        <span><i class="bi bi-envelope-fill me-2"></i>support@technicalhub.io</span>
-        <span class="ms-4"><i class="bi bi-geo-alt-fill me-2"></i>Aditya University, Surampalem</span>
-      </div>
-      <div class="topbar-right">
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
-  </div>
-
   <!-- ============ NAVBAR ============ -->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#home">
-        <span class="brand-mark">TH</span>
-        <span class="brand-text">
-          <strong>Technical&nbsp;Hub</strong>
-          <small>×&nbsp;Aditya&nbsp;University</small>
-        </span>
+      <a class="navbar-brand" href="#home" aria-label="Technical Hub × Aditya University">
+        <img src="assets/logo-technicalhub.png" alt="Technical Hub" class="brand-logo brand-logo-th" />
+        <span class="brand-x">×</span>
+        <img src="assets/logo-aditya.svg" alt="Aditya University" class="brand-logo brand-logo-au" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navItems" aria-controls="navItems" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,8 +38,8 @@
           <li class="nav-item"><a class="nav-link" href="#fdp">FDPs</a></li>
           <li class="nav-item"><a class="nav-link" href="#hackathon">Project Space</a></li>
           <li class="nav-item"><a class="nav-link" href="#platform">Platform</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projectstreet">Project Street</a></li>
           <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
-          <li class="nav-item ms-lg-3"><a class="btn btn-accent btn-sm" href="#contact">Get in Touch</a></li>
         </ul>
       </div>
     </div>
@@ -279,7 +260,43 @@
       </div>
 
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 order-lg-2">
+        <div class="col-lg-6">
+          <div id="hackathonCarousel" class="carousel slide results-carousel" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="hover">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#hackathonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Speaker on stage"></button>
+              <button type="button" data-bs-target="#hackathonCarousel" data-bs-slide-to="1" aria-label="Teams building during the hackathon"></button>
+              <button type="button" data-bs-target="#hackathonCarousel" data-bs-slide-to="2" aria-label="Participants at the venue"></button>
+              <button type="button" data-bs-target="#hackathonCarousel" data-bs-slide-to="3" aria-label="Industry experts mentoring teams"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/hackathon-stage.jpg" class="d-block" alt="Speaker presenting the Project Space framework with a Claude card on stage" loading="lazy" />
+                <div class="carousel-caption"><p>Project Space, Season 8 — Identify · Develop · Solve · Deploy</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/hackathon-classroom.jpg" class="d-block" alt="Students with laptops during Project Space Day 6, Season 8" loading="lazy" />
+                <div class="carousel-caption"><p>Day 6 — teams building industry-level solutions with Claude</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/hackathon-crowd.jpg" class="d-block" alt="Hundreds of students participating in the Project Space hackathon" loading="lazy" />
+                <div class="carousel-caption"><p>A campus-wide, AI-native ecosystem of student innovators</p></div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/mentorship.jpg" class="d-block" alt="Industry expert mentoring a participating team at Project Space" loading="lazy" />
+                <div class="carousel-caption"><p>Industry veterans mentoring teams on anchoring Claude's reasoning</p></div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hackathonCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hackathonCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6">
           <p>
             To cultivate a truly AI-native ecosystem among the student body, Technical Hub organized
             <strong>'Project Space'</strong> — a high-impact collaborative event specifically designed to
@@ -300,28 +317,6 @@
           <div class="cycle-tags">
             <span>Identify</span><span>Develop</span><span>Solve</span><span>Deploy</span>
           </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <figure class="image-card">
-            <img src="assets/hackathon-stage.jpg" alt="Speaker presenting the Project Space framework with a Claude card on stage" class="img-fluid" loading="lazy" />
-            <figcaption>Project Space, Season 8 — Identify · Develop · Solve · Deploy</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- Event gallery -->
-      <div class="row g-4 mt-2 gallery">
-        <div class="col-md-6">
-          <figure class="image-card">
-            <img src="assets/hackathon-classroom.jpg" alt="Students with laptops during Project Space Day 6, Season 8" class="img-fluid" loading="lazy" />
-            <figcaption>Day 6 — teams building industry-level solutions with Claude</figcaption>
-          </figure>
-        </div>
-        <div class="col-md-6">
-          <figure class="image-card">
-            <img src="assets/mentorship.jpg" alt="Industry expert mentoring a participating team at Project Space" class="img-fluid" loading="lazy" />
-            <figcaption>Industry veterans mentoring teams on anchoring Claude's reasoning</figcaption>
-          </figure>
         </div>
       </div>
 
@@ -369,6 +364,22 @@
         to streamline student innovation. It unifies project tracking, mentoring, assessment, and
         AI-driven insights into a single, seamless environment.
       </p>
+
+      <!-- Live product screenshots -->
+      <div class="row g-4 mt-4 align-items-stretch platform-shots">
+        <div class="col-lg-8">
+          <figure class="image-card shot-dashboard h-100">
+            <img src="assets/platform-dashboard.jpg" alt="Project Space dashboard — Project Details view with team cards and the 160-project directory" class="img-fluid" loading="lazy" />
+            <figcaption>Project Details dashboard — live team profiles, the 160-project directory, and Claude credit tracking</figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-4">
+          <figure class="image-card shot-login h-100">
+            <img src="assets/platform-login.jpg" alt="Project Space login — roll-number sign-in with OTP verification" class="img-fluid" loading="lazy" />
+            <figcaption>Secure team sign-in with roll-number &amp; OTP verification</figcaption>
+          </figure>
+        </div>
+      </div>
 
       <div class="row g-4 mt-3">
         <div class="col-md-6 col-lg-4">
@@ -494,6 +505,71 @@
     </div>
   </section>
 
+  <!-- ============ PROJECT STREET ============ -->
+  <section class="section" id="projectstreet">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow">Public Showcase</span>
+        <h2>Project Street</h2>
+        <p class="section-sub">
+          A dynamic, student-led exhibition initiative powered by Technical Hub.
+        </p>
+      </div>
+
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="lead-text">
+            Serving as a bustling open-air gallery of practical innovation, Project Street transforms
+            technical learning into a public showcase — where trainees display their web applications,
+            hardware prototypes, software builds, and creative designs directly to peers, faculty, and visitors.
+          </p>
+          <p>
+            Unlike conventional lab assessments, Project Street brings a vibrant, community-driven edge to
+            engineering. It challenges students to pitch their technical solutions effectively, field live
+            user feedback, and demonstrate how their code translates into real-world utility.
+          </p>
+          <p>
+            It is an essential stepping stone within the Technical Hub ecosystem that builds critical
+            communication, presentation, and marketing skills alongside technical mastery.
+          </p>
+          <div class="cycle-tags">
+            <span>Exhibit</span><span>Pitch</span><span>Feedback</span><span>Iterate</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <figure class="image-card">
+            <img src="assets/results-easel.jpg" alt="Students showcasing their projects to peers and visitors at Project Street" class="img-fluid" loading="lazy" />
+            <figcaption>An open-air gallery of practical innovation — trainees showcasing live builds</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="impact-card">
+            <i class="bi bi-easel2-fill"></i>
+            <h5>Live Public Exhibition</h5>
+            <p>Web apps, hardware prototypes, software builds, and creative designs displayed directly to peers, faculty, and visitors.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impact-card">
+            <i class="bi bi-megaphone-fill"></i>
+            <h5>Pitch &amp; Communicate</h5>
+            <p>Students pitch their technical solutions effectively and field live user feedback in a real, community-driven setting.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="impact-card">
+            <i class="bi bi-stars"></i>
+            <h5>Real-World Utility</h5>
+            <p>A stepping stone that proves how code translates into real-world value — building communication, presentation, and marketing skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ RESULTS ============ -->
   <section class="section section-alt" id="results">
     <div class="container">
@@ -581,14 +657,11 @@
     </div>
   </section>
 
-  <!-- ============ CTA / CONTACT ============ -->
-  <section class="cta-band" id="contact">
+  <!-- ============ CTA ============ -->
+  <section class="cta-band" id="cta">
     <div class="container text-center">
       <h2>Future-proof your institution with Claude AI</h2>
-      <p>Partner with Technical Hub to turn hours of labor into seconds of insight.</p>
-      <a href="mailto:support@technicalhub.io" class="btn btn-accent btn-lg">
-        <i class="bi bi-envelope-fill me-2"></i>support@technicalhub.io
-      </a>
+      <p class="mb-0">Technical Hub × Aditya University — turning hours of labor into seconds of insight.</p>
     </div>
   </section>
 
@@ -596,21 +669,15 @@
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4">
+        <div class="col-lg-5">
           <div class="footer-brand">
-            <span class="brand-mark">TH</span>
-            <strong>Technical Hub</strong>
+            <img src="assets/logo-technicalhub-alt.png" alt="Technical Hub" class="footer-logo footer-logo-th" />
+            <span class="footer-x">×</span>
+            <img src="assets/logo-aditya.svg" alt="Aditya University" class="footer-logo footer-logo-au" />
           </div>
           <p>Driving organizational excellence and deploying advanced technical solutions across campus operations — in strategic partnership with Aditya University.</p>
-          <div class="footer-social">
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          </div>
         </div>
-        <div class="col-6 col-lg-2">
+        <div class="col-6 col-lg-3">
           <h6>Explore</h6>
           <ul>
             <li><a href="#summary">Overview</a></li>
@@ -618,24 +685,18 @@
             <li><a href="#fdp">FDPs</a></li>
             <li><a href="#hackathon">Project Space</a></li>
             <li><a href="#platform">Platform</a></li>
+            <li><a href="#projectstreet">Project Street</a></li>
             <li><a href="#results">Results</a></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col-6 col-lg-4">
           <h6>Initiatives</h6>
           <ul>
             <li><a href="#fdp">Faculty Development</a></li>
             <li><a href="#hackathon">Project Space Hackathon</a></li>
             <li><a href="#platform">Project Specification App</a></li>
             <li><a href="#platform">AI Code Analysis</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3">
-          <h6>Get in Touch</h6>
-          <ul class="contact-list">
-            <li><i class="bi bi-envelope-fill"></i> support@technicalhub.io</li>
-            <li><i class="bi bi-geo-alt-fill"></i> Aditya University, Surampalem, A.P.</li>
-            <li><i class="bi bi-globe"></i> projectspace.technicalhub.io</li>
+            <li><a href="#projectstreet">Project Street Exhibition</a></li>
           </ul>
         </div>
       </div>

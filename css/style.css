@@ -69,7 +69,12 @@ a { text-decoration: none; }
   padding: .6rem 0;
   transition: .3s;
 }
-.navbar-brand { display: flex; align-items: center; gap: 12px; }
+.navbar-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand-logo { display: block; width: auto; object-fit: contain; }
+.brand-logo-th { height: 30px; }
+.brand-logo-au { height: 44px; }
+.brand-x { color: var(--muted); font-weight: 400; font-size: 1.1rem; line-height: 1; opacity: .6; }
+
 .brand-mark {
   display: inline-grid; place-items: center;
   width: 42px; height: 42px; border-radius: 10px;
@@ -77,9 +82,6 @@ a { text-decoration: none; }
   font-family: 'Poppins'; font-weight: 800; font-size: 1.1rem;
   box-shadow: 0 4px 12px rgba(244,123,32,.4);
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-text strong { color: var(--navy); font-family: 'Poppins'; font-size: 1.05rem; }
-.brand-text small { color: var(--muted); font-size: .72rem; letter-spacing: .3px; }
 
 #mainNav .nav-link {
   color: var(--navy);
@@ -179,6 +181,12 @@ p { color: #3a4254; }
 .winners-photo img { height: auto; max-height: none; object-fit: contain; background: #0d1c4d; }
 .results-photo img { max-height: 420px; }
 .shot-login { box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+
+/* Platform product screenshots */
+.platform-shots .image-card { display: flex; flex-direction: column; box-shadow: 0 20px 50px rgba(0,0,0,.45); }
+.platform-shots .image-card img { width: 100%; height: 100%; min-height: 0; max-height: 440px; object-fit: cover; object-position: top center; }
+.platform-shots .shot-login img { object-fit: contain; background: #0a0e1f; padding: 10px; }
+.platform-shots figcaption { margin-top: auto; }
 .image-placeholder {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   min-height: 320px; gap: .8rem; color: #fff;
@@ -295,8 +303,12 @@ p { color: #3a4254; }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-dark); color: #b8c2e0; padding: 4rem 0 1.5rem; }
-.footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
+.footer-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 1.2rem; flex-wrap: wrap; }
 .footer-brand strong { color: #fff; font-family: 'Poppins'; font-size: 1.2rem; }
+.footer-logo { display: block; width: auto; object-fit: contain; }
+.footer-logo-th { height: 52px; }
+.footer-logo-au { height: 56px; }
+.footer-x { color: #6b78a8; font-size: 1.3rem; line-height: 1; }
 .site-footer p { color: #9fb0dd; font-size: .92rem; }
 .site-footer h6 { color: #fff; font-family: 'Poppins'; font-weight: 600; margin-bottom: 1.1rem; letter-spacing: .5px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
@@ -389,23 +401,52 @@ p { color: #3a4254; }
 [data-reveal].in { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1199px) {
+  .brand-logo-au { height: 40px; }
+  .brand-logo-th { height: 28px; }
+}
+
 @media (max-width: 991px) {
   #mainNav .navbar-nav { padding-top: 1rem; gap: .2rem; }
+  .section { padding: 4rem 0; }
+  .section-head { margin-bottom: 2.2rem; }
   .hero { padding: 4.5rem 0 3.5rem; }
   .hero-meta { gap: 1.5rem; }
   .browser-body { flex-direction: column; }
   .mock-sidebar { width: 100%; }
   .project-carousel .carousel-item { height: 420px; }
   .results-carousel .carousel-item img { height: 340px; }
+  .platform-shots .image-card img { max-height: 360px; }
+  .incentive-banner { padding: 2rem 1.6rem; }
+  .big-figure { font-size: 2.8rem; }
+}
+
+@media (max-width: 767px) {
+  .footer-logo-th { height: 44px; }
+  .footer-logo-au { height: 46px; }
+  .big-figure { margin-top: 1rem; }
+  .incentive-banner .text-md-end { text-align: left !important; }
+  .gallery .image-card img { height: 220px; }
 }
 
 @media (max-width: 575px) {
+  .section { padding: 3.2rem 0; }
+  .brand-logo-au { height: 34px; }
+  .brand-logo-th { height: 24px; }
+  .navbar-brand { gap: 8px; }
+  .brand-x { font-size: .9rem; }
+  .hero .lead { font-size: 1.05rem; }
+  .hero-cta { gap: .7rem; }
+  .hero-cta .btn { width: 100%; }
+  .lead-text { font-size: 1.08rem; }
+  .platform-shots .image-card img { max-height: 300px; }
+  .incentive-banner { padding: 1.6rem 1.2rem; }
   .project-carousel .carousel-item { height: 340px; }
   .project-carousel .carousel-item img { padding: 8px; }
   .project-carousel .carousel-indicators { bottom: -2.4rem; }
   .project-carousel .carousel-control-prev,
   .project-carousel .carousel-control-next { width: 12%; }
-  .results-carousel .carousel-item img { height: 260px; }
+  .results-carousel .carousel-item img { height: 230px; }
   .results-carousel .carousel-caption { padding-top: 1.8rem; }
   .carousel-control-prev-icon, .carousel-control-next-icon { padding: .9rem; }
 }
