@@ -163,6 +163,24 @@ a { text-decoration: none; }
 .lead-text { font-size: 1.18rem; color: var(--ink); font-weight: 500; }
 p { color: #3a4254; }
 
+/* ---------- Justified long-form prose ----------
+   Applied to the multi-line reading columns where justification
+   improves the clean block edge; short captions, card copy and
+   centred intros are intentionally left ragged-right. */
+#summary .col-lg-9 p,
+#summary .lead-text,
+#excellence .col-lg-6 > p,
+#fdp .col-lg-6 > p,
+#hackathon .col-lg-6 > p,
+#projectstreet .col-lg-6 > p,
+#results .col-lg-9 p,
+.incentive-banner p,
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
 /* ---------- Feature list ---------- */
 .feature-list { list-style: none; padding: 0; margin: 1rem 0 0; }
 .feature-list li { display: flex; gap: .7rem; margin-bottom: 1rem; color: #3a4254; }
