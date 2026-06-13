@@ -394,6 +394,35 @@ p { color: #3a4254; }
 .project-carousel .carousel-control-prev { left: -2.5%; }
 .project-carousel .carousel-control-next { right: -2.5%; }
 
+/* Platform walkthrough carousel (full app screenshots) */
+.app-carousel {
+  max-width: 1060px; margin: 0 auto; border-radius: 16px; overflow: hidden;
+  background: #0a0e1f; border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 24px 60px rgba(0,0,0,.5);
+}
+.app-carousel .carousel-item { background: #0a0e1f; }
+.app-carousel .carousel-item img {
+  width: 100%; height: 600px; object-fit: contain; object-position: center;
+  background: #0a0e1f; display: block;
+}
+.app-carousel .app-cap {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .95rem 1.4rem; background: #11193c;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: #cdd6f0; font-size: .95rem; font-weight: 500;
+}
+.app-cap-role {
+  flex-shrink: 0; background: var(--accent); color: #fff;
+  font-family: 'Poppins'; font-weight: 700; font-size: .68rem;
+  text-transform: uppercase; letter-spacing: .6px;
+  padding: 4px 12px; border-radius: 50px;
+}
+.app-carousel .carousel-indicators {
+  margin-bottom: 4rem; flex-wrap: wrap; row-gap: 8px; padding-inline: 2rem;
+}
+.app-carousel .carousel-control-prev,
+.app-carousel .carousel-control-next { align-items: flex-start; padding-top: 42%; }
+
 /* Results photo carousel (full-bleed photos) */
 .results-carousel { max-width: 960px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); background: #0d1c4d; }
 .results-carousel .carousel-item img { width: 100%; height: 540px; object-fit: cover; object-position: center 42%; }
@@ -434,6 +463,7 @@ p { color: #3a4254; }
   .browser-body { flex-direction: column; }
   .mock-sidebar { width: 100%; }
   .project-carousel .carousel-item { height: 420px; }
+  .app-carousel .carousel-item img { height: 440px; }
   .results-carousel .carousel-item img { height: 400px; }
   .platform-shots .image-card img { max-height: 360px; }
   .incentive-banner { padding: 2rem 1.6rem; }
@@ -467,5 +497,8 @@ p { color: #3a4254; }
   .project-carousel .carousel-control-next { width: 12%; }
   .results-carousel .carousel-item img { height: 260px; }
   .results-carousel .carousel-caption { padding-top: 1.8rem; }
+  .app-carousel .carousel-item img { height: 230px; }
+  .app-carousel .app-cap { font-size: .82rem; padding: .7rem 1rem; }
+  .app-carousel .carousel-indicators { margin-bottom: 3.4rem; padding-inline: 1rem; }
   .carousel-control-prev-icon, .carousel-control-next-icon { padding: .9rem; }
 }
